@@ -1,5 +1,5 @@
 class PinsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+before_filter :authenticate_user!, except: [:index]
 
   # GET /pins
   # GET /pins.json
@@ -81,9 +81,5 @@ class PinsController < ApplicationController
       format.html { redirect_to pins_url }
       format.json { head :no_content }
     end
-  end
-  
-  def pin_params
-    params.require(:pin).permit(:description, :image)
   end
 end
