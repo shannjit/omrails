@@ -40,7 +40,7 @@ class PinsController < ApplicationController
   end
 
   # POST /pins
-  # POST /pins.json
+  # POST /pins.json 
   def create
     @pin = current_user.pins.new(params[:pin])
 
